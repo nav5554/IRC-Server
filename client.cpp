@@ -21,7 +21,7 @@ int port = 8088;
 
 
 //Compiler Command
-//g++ 4.cpp -lws2_32 -lwininet -mwindows
+//g++ client.cpp -lws2_32 -lwininet -mwindows
 
 
 
@@ -45,8 +45,6 @@ bool IsSocketConnected(SOCKET socket)
 		return true;
 	}
 	
-
-
 }
 
 void disable_echo() {
@@ -73,11 +71,7 @@ string deHeartbeatString(string str)
 	else
 	{
 		return str;
-	}
-
-	
-
-	
+	}	
 }
 
 
@@ -94,19 +88,7 @@ DWORD WINAPI chatServer(LPVOID LpParam)
 	//Port Number
 	hint.sin_port = htons(port);
 
-	//IP 
-	//
-	//
 	hint.sin_addr.s_addr = inet_addr(ipaddress.c_str());
-
-	//Local Testing
-	//inet_pton(AF_INET, "54.167.46.14", &hint.sin_addr);
-
-	//Server Testing
-	//inet_pton(AF_INET, "127.0.0.1", &hint.sin_addr);
-	
-
-	
 	
 	connect(clientSocket2, (sockaddr*)&hint, sizeof(hint));
 	
@@ -135,15 +117,11 @@ DWORD WINAPI chatServer(LPVOID LpParam)
 		if(realMessage != "")
 		{
 			cout << realMessage << endl;
-
-		
 		}
-
 		message = "";
 		realMessage = "";
 		
 	}
-
 	return 0;
 				
 
@@ -200,21 +178,6 @@ int main()
 		count++;
 						
 	}
-
-
-
-			
-
-		
-	
-		
-		
-
-		
-		
-		
-	
-
 
 }
 
