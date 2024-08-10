@@ -5,8 +5,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 
-
-
 public class irc_server {
 
     private ArrayList<Socket> clientStorage;
@@ -59,8 +57,6 @@ public class irc_server {
 
                     bytesRead = inputStream.read(buffer);
 
-                   
-                    
                     String msg = new String(buffer, "UTF-8");
                     if(this.showMessages)
                     {
@@ -71,16 +67,11 @@ public class irc_server {
                     buffer = new byte[1024];
                     bytesRead = 0;
 
-                    
                 } 
                 catch (Exception e) {
                     
                 }
-
-
             }
-
-
         }
   
 
@@ -141,8 +132,6 @@ public class irc_server {
         }
 
     
-
-
     }
 
     public static void main(String[] args) throws IOException { 
