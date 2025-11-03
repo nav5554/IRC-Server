@@ -12,11 +12,11 @@ string msg;
 
 //Enter ip address of server running chatServer.java
 
-string ipaddress = "34.201.99.152";
+string ipaddress = "ENTER SERVER ADDRESS HERE";
 
 //Enter port of server running chatServer.java
 
-int port = 8088;
+int port = ENTER SERVER PORT HERE;
 
 
 
@@ -180,6 +180,7 @@ int main()
 	}
 
 }
+
 
 
 
